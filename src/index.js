@@ -14,12 +14,11 @@ function App() {
 
     return (
         <input
-            type="number"
-            min={3}
-            max={10}
-            list={[1, 2, 3]}
-            style={{ color: 'red' }}
-            placeholder={message}
+            autoFocus
+            max={5}
+            spellCheck={true}
+            className="input"
+            style={{ border: '1px solid red' }}
         />
     );
 }
