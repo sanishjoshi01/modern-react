@@ -10,9 +10,10 @@ const root = ReactDOM.createRoot(el);
 
 // 4) Create component
 function App() {
-    const message = "red";
+    const name = "Sandesh Joshi";
+    const age = 22;
 
-    return <h1>{message}</h1>;
+    return <h1>Hi my name is {name} and I am {age} years old.</h1>;
 }
 
 // 5) Show the component on the screen
