@@ -2,26 +2,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// 2) Get a reference to the div with ID root
+// 2) Import App Component
+import App from "./App";
+
+// 3) Get a reference to the div with ID root
 const el = document.getElementById("root");
 
-// 3) Tell React to take control of that element
+// 4) Tell React to take control of that element
 const root = ReactDOM.createRoot(el);
-
-// 4) Create component
-function App() {
-    const message = "Age";
-
-    return (
-        <input
-            autoFocus
-            max={5}
-            spellCheck={true}
-            className="input"
-            style={{ border: '1px solid red' }}
-        />
-    );
-}
 
 // 5) Show the component on the screen
 root.render(<App />);
