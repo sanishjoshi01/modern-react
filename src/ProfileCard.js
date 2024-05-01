@@ -1,8 +1,8 @@
-const ProfileCard = (props) => {
+const ProfileCard = ({ title, handle }) => {
     return (
         <div>
-            <div>Title is {props.title}</div>
-            <div>Username is {props.handle}</div>
+            <div>Title is {title}</div>
+            <div>Username is {handle}</div>
         </div>
     );
 }
