@@ -1,4 +1,4 @@
-const ProfileCard = ({ title, handle, image }) => {
+const ProfileCard = ({ title, handle, image, content }) => {
     return (
         <div className="card">
             <div className="card-image">
@@ -9,9 +9,10 @@ const ProfileCard = ({ title, handle, image }) => {
 
             <div className="card-content">
                 <div className="media-content">
-                    <p>Title is {title}</p>
-                    <p>Username is {handle}</p>
+                    <p>{title}</p>
+                    <p>{handle}</p>
                 </div>
+                <div className="content">{content}</div>
             </div>
         </div>
     );
