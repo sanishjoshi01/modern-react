@@ -1,7 +1,15 @@
+import ProfileCard from "./ProfileCard";
+
 function App() {
 
     return (
-        <h1>BYE there!</h1>
+        <div>
+            <div>Personal Digital Assistants</div>
+
+            <ProfileCard />
+            <ProfileCard />
+            <ProfileCard />
+        </div>
     );
 }
 
