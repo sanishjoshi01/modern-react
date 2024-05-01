@@ -1,7 +1,8 @@
-const ProfileCard = () => {
+const ProfileCard = (props) => {
     return (
         <div>
-            Profile Card!
+            <div>Title is {props.title}</div>
+            <div>Username is {props.handle}</div>
         </div>
     );
 }
