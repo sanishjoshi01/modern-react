@@ -1,5 +1,5 @@
-const AnimalShow = () => {
-    return (<div>cow!</div>);
+const AnimalShow = ({ type }) => {
+    return (<div>{type}</div>);
 }
 
 export default AnimalShow;
