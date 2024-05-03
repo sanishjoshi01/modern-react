@@ -1,5 +1,16 @@
+import SearchBar from "./components/SearchBar";
+// import searchImages from "./api";
+
 function App() {
-    return <div>App</div>
+    const handleSubmit = (term) => {
+        console.log(term);
+    };
+
+    return (
+        <div>
+            <SearchBar onSubmit={handleSubmit} />
+        </div>
+    );
 }
 
 export default App;
