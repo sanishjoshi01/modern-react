@@ -4,5 +4,4 @@ function ImageList() {
     </div>
 }
 
-export default ImageList
-    ;
+export default ImageList;
