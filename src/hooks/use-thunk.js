@@ -6,13 +6,16 @@ export function useThunk(thunk) {
   const [error, setError] = useState(null);
   const dispatch = useDispatch();
 
-  const runThunk = useCallback(() => {
-    setIsLoading(true);
-    dispatch(thunk())
-      .unwrap()
-      .catch((err) => setError(err))
-      .finally(() => setIsLoading(false));
-  }, [dispatch, thunk]);
+  const runThunk = useCallback(
+    (arg) => {
+      setIsLoading(true);
+      dispatch(thunk(arg))
+        .unwrap()
+        .catch((err) => setError(err))
+        .finally(() => setIsLoading(false));
+    },
+    [dispatch, thunk]
+  );
 
   return [runThunk, isLoading, error];
 }

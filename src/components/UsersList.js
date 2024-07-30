@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { fetchUsers, addUser } from "../store";
+import { fetchUsers, addUser, deleteUser } from "../store";
 import Skeleton from "./Skeleton";
 import Button from "./Button";
 import { useThunk } from "../hooks/use-thunk";
+import UsersListItem from "./UsersListItem";
 
 function UsersList() {
   const [doFetchUsers, isLoadingUsers, loadingUsersError] =
@@ -25,18 +26,12 @@ function UsersList() {
 
   let content;
   if (isLoadingUsers) {
-    content = <Skeleton times={6} className="h-10 w-full" />;
+    content = <Skeleton times={6} className="h-12 w-full" />;
   } else if (loadingUsersError) {
     content = <div>Error Fetching Data</div>;
   } else {
     content = data.map((user) => {
-      return (
-        <div key={user.id} className="mb-2 border rounded">
-          <div className="flex p-2 justify-between items-center cursor-pointer">
-            {user.name}
-          </div>
-        </div>
-      );
+      return <UsersListItem key={user.id} user={user} />;
     });
   }
   return (
